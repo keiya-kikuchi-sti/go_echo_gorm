@@ -1,0 +1,16 @@
+# "/" への GET
+GET http://localhost:8080/
+
+###
+# "/todos/" への GET
+GET http://localhost:8080/todos/
+
+###
+# "/todos/" への POST（未実装）
+POST http://localhost:8080/todos/
+Content-Type: application/json
+
+{
+    "text": "rest test",
+    "done": false
+}

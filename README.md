@@ -15,7 +15,9 @@ docker compose up -d
 
 ## API 実行
 
-DevContainer 内のターミナルで
+DevContainer 内のターミナルで以下のコマンドを実行する。  
+（必要なパッケージが無ければ勝手にダウンロードします）
+
 ```bash
 # in /go/src
 go run main.go

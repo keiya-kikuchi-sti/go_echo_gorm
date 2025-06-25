@@ -8,6 +8,7 @@ services:
       - db
     volumes:
       - .:/go/src/
+    working_dir: /go/src
   db:
     image: mysql:9.3
     restart: always

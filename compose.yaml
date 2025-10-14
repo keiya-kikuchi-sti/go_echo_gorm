@@ -20,6 +20,18 @@ services:
     volumes:
       - db_vol:/var/lib/mysql
       - ./mysql/init:/docker-entrypoint-initdb.d
+  postgres:
+    image: postgres:latest
+    restart: always
+    ports: 
+      - "5432:5432"
+      # - "20443:20443"
+    volumes:
+      - ./.devcontainer/pg/init:/docker-entrypoint-initdb.d
+    environment:
+      POSTGRES_USER: "user"
+      POSTGRES_PASSWORD: "pass"
+      POSTGRES_DB: "db"
 
 volumes:
   db_vol:
